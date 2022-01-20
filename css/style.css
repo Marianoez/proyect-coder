@@ -1,0 +1,555 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Font de google, Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #faf0ef;
+    text-decoration: none;
+}
+
+
+
+.main {    
+    /* width: 100%; */
+    background-color: #F5E1E0;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    border-bottom: 2px solid #7b2828;
+    align-items: center;
+}
+
+
+.logo-empresarial {
+    display: flex;
+    width: 30vh;
+    background-color: #F5E1E0;
+    margin: auto;
+}
+
+
+.main-menu li {
+    display: inline-block;           
+}
+
+.nav-uno {
+    text-align-last: justify;
+    color: #7b2828;
+    padding: 1.5vh 8vh; 
+    font-family: 'Raleway', sans-serif;
+    transition: all 1s linear;    
+    text-decoration: none;    
+}   
+
+
+nav ul li a {
+    margin: auto;
+    padding: 1.5vh 8vh;    
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: #7b2828;
+    
+}
+
+.menu-nav-uno {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    transition: all 1s linear;
+    border-radius: 4rem;        
+}
+
+.menu-nav-uno:hover {
+    background-color: #e3b8b5;
+        
+}
+
+/* Carrusel de ofertas */
+
+.ofertas {
+    margin-top: 1%;
+}
+
+.contenedor-ofertas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-oferta {
+    /* width: 500px;
+    height: 600px; */
+    width: 18vw;
+    height: 35vh;
+    border-radius: 10%;
+    transition: all 3s ease;
+    
+}
+
+.imagenes-oferta:hover .imagen-oferta {
+    transform: scale(1.5);
+}
+
+.imagenes-oferta {
+    overflow: hidden;
+    border-radius: 10%;    
+}
+
+
+.ofertas-title {
+    font-family: 'Raleway', sans-serif;
+    display: flex;  
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 2%;
+}
+
+.encabezado-oferta {
+    background-color: #f7db8e;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #7b2828;
+}
+
+h4 {
+     font-family: 'Raleway', sans-serif;
+}
+
+.ofertas, .concursos, #nosotros, #contacto {
+    background-color: #faf0ef;
+}
+
+
+
+/* Articles */
+
+.div-article {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.lanzamientos {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+.image-lanzamiento {
+    margin: 2rem;
+    align-items: center;
+}
+
+.titulo-article {
+    text-align: center;
+}
+
+
+.concursos {
+    display: inline-block; 
+    margin: auto;
+}
+
+/* Nosotros */
+
+#nosotros {
+    display: inline-block;
+    margin: 40px 0px ;
+    align-items: center;
+
+}
+
+.nosotros-title{
+    padding: 1rem;
+}
+
+.nosotros-content {
+    display: grid;
+    grid-template-columns: 2fr 0.1fr 2fr;
+    grid-template-rows: 4fr;
+    
+}
+
+#nosotros .video {
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    
+
+}
+
+.parrafo-nosotros {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    font-size: 2rem;
+    padding-left: 5%;
+}
+
+#nosotros .ubicacion {
+    padding-bottom: 20px ;
+    margin-top: 40px;
+}
+
+#nosotros .ubicacion .ubicacion-title {
+    padding-bottom: 20px;
+}
+
+#nosotros .ubicacion .ubicacion-title .ubicacion-map {
+    margin: 200px; 
+}
+
+/* mapa */ 
+
+.ubicacion {
+   /*  width: 75%; */
+    display: inline-block;
+
+}
+.ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+}
+.mapa-ubicacion {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.ubicacion-map {
+    display: inline-block;
+    
+
+}
+
+.ubicacion-title {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+/* Contacto */
+
+
+
+
+.contacto-title {
+    margin-top: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #7b2828;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem; 
+}
+
+.iconos-contacto { 
+    display: flex;   
+    justify-content: space-around;
+    padding-top: 40px;
+    color: #7b2828;
+}
+
+.phone {
+    margin-bottom: 200px;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 1s linear;
+    border-radius: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    
+
+}
+
+.phone:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #ceb0b0;
+    
+
+}
+
+.email:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #ceb0b0;
+
+}
+.phone-number, .email-adress {
+    color: #7b2828;
+    padding-left: 10%;
+    font-size: 2rem;
+    width: 300px;
+}
+
+.iconos-contacto div div a {
+    color: #7b2828;
+}
+
+/* Footer */
+
+footer {
+    color: #7b2828;
+    border-top: 2px solid #7b2828;
+    border-bottom: 2px solid #7b2828; 
+    background-color: #f5e1e0;
+    font-style: italic;
+    margin-top: 40px;
+    padding: 20px 0px;
+    padding-left: 1rem;
+}
+footer h4 {
+    padding-bottom: 15px;
+}
+
+.iconos-container:hover .fb,
+.iconos-container:hover .ig {
+    transform: translatex(10%);
+}
+
+footer nav div div a {    
+    color: #7b2828;
+    font-size: 1.5rem;
+}
+
+footer nav a {
+    color: #7b2828;
+    text-decoration: solid;
+}
+
+.ig, .fb {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 1.5s ease-in-out;
+}
+
+.fb {
+    transition: all 1.5s ease-in;
+}
+
+.ig-text, .fb-text {
+    margin-left: 1%;
+}
+
+
+
+/* Pagina Carrito.html */
+
+.carrito-title {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f7db8e;
+    display: inline;
+    margin-top: 15px;
+    margin: 44.5%;
+    text-align: center;
+
+}
+
+.img-carrito {
+    width: 20%;
+    height: 20%;
+    margin: 20px 0px 20px 560px;
+    
+}   
+
+
+
+.nombre-producto {
+    margin-left: 40.5%;
+}
+
+.descripcion-producto {
+    margin-left: 40.5%;
+}
+
+
+/* Pagina Productos */
+section h1 {
+    display: flex;
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0px;
+}
+
+.grid-image {
+    display: grid;
+    gap: 0%;    
+}
+
+.img-productos {
+    display: grid;
+    width: 400px;
+    height: 400px; 
+    margin: auto    ;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.productos-main {
+    display: inline;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    
+    color: #7b2828;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondo-color {
+    background-color: #f7db8e;
+}
+.productos-descripcion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* Oferta */
+
+.oferta-title {
+    
+    font-family: 'Raleway', sans-serif;
+    background-color: #f7db8e;
+    color: #7b2828;
+    display: inline;
+    margin-top: 15px;
+    margin: 46.5%;
+    text-align: center;
+}
+
+.ofertas-principal .img-oferta {
+    margin-left: 40%;
+    width: 20%;
+}
+.oferta-subtitle {
+    margin-left: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+
+    .logo-empresarial {
+        display: block;
+        justify-content: center;
+        width: 30vh;        
+        background-color: #F5E1E0;
+        /* margin: auto; */
+    }
+
+
+    .main {    
+        
+        background-color: #F5E1E0;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        border-bottom: 2px solid #7b2828;
+        align-items: center;
+    }
+    
+    
+       
+    
+    .main-menu li {
+        display: inline-block;           
+    }
+    
+    .contenedor-ofertas {
+        display: block;
+        justify-content: center;
+    }
+
+    .imagen-oferta {
+        /* width: 500px;
+        height: 600px; */
+        width: 100%;
+        height: 50%;
+        border-radius: 10%;
+        transition: all 3s ease;
+        
+    }
+    
+    .imagenes-oferta:hover .imagen-oferta {
+        transform: scale(1.5);
+    }
+    
+    .imagenes-oferta {
+        overflow: hidden;
+        border-radius: 10%;    
+    }
+    
+    
+    .ofertas-title {
+        font-family: 'Raleway', sans-serif;
+        display: flex;  
+        text-align:  center;
+        font-size: 2rem;
+        margin-top: 2%;
+    }
+
+    /* articles */    
+    .div-article {
+        display: block;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    
+    .lanzamientos {
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+    }
+    .image-lanzamiento {
+        margin: 2rem;
+        align-items: center;
+       
+    }
+    
+    .titulo-article {
+        text-align: center;
+    }
+    
+    
+    .concursos {
+        display: block; 
+        text-align: center;
+        width: 50%;
+    }
+        
+
+
+}
+
+
+
+
+
