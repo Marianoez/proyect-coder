@@ -360,7 +360,9 @@ footer nav a {
 
 }
 
-.img-carrito {
+
+
+.img-carrito-1, .img-carrito-2, .img-carrito-3, .img-carrito-4 {
     width: 20%;
     height: 20%;
     margin: 20px 0px 20px 560px;
