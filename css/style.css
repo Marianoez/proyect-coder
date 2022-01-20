@@ -442,14 +442,40 @@ h1 {
     text-align: center;
 }
 
-.ofertas-principal .img-oferta {
+.ofertas.principal {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+
+.img-oferta-1, .img-oferta-2, .img-oferta-3, .img-oferta-4   {
     margin-left: 40%;
     width: 20%;
+    border-radius: 5%;
+    transition: all 1s ease;
+    overflow: hidden;
 }
+
+.ofertas-principal:hover .img-oferta-1,
+.ofertas-principal:hover .img-oferta-2,
+.ofertas-principal:hover .img-oferta-3,
+.ofertas-principal:hover .img-oferta-4 {
+    transform: scale(1.05);    
+    
+}
+
 .oferta-subtitle {
     margin-left: 25%;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.descripcion-producto {
+    color: #7b2828;
+    text-align: center;
+    margin: 2%;
 }
 
 /* Media Queries */
