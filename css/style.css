@@ -386,8 +386,8 @@ section h1 {
 }
 .grid-container {
     display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 0px;
 }
 
@@ -398,9 +398,9 @@ section h1 {
 
 .img-productos {
     display: grid;
-    width: 400px;
-    height: 400px; 
-    margin: auto    ;
+    width: 18vw;
+    height: 35vh; 
+    margin: auto;
     text-align: center;
     border-radius: 10%;
 }
@@ -410,24 +410,37 @@ section h1 {
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
-    
+    font-family: 'Raleway', sans-serif;    
     color: #7b2828;
     justify-content: space-around;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2%;
 }
 
 .fondo-color {
     background-color: #f7db8e;
 }
 .productos-descripcion {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 2%; 
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+.prod-a-carrito {
+    display: flex;
+    margin: 4%;
+}
+
+.prod-a-carrito a{    
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 0.5% ;
+    text-decoration: none;
+    text-align: center;
+    color: #7b2828;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
+
 }
 
 
