@@ -52,10 +52,9 @@ body {
     padding-right: 3rem;
     margin: 0px 2px;
     transition: all 1s linear;
-    border-radius: 4rem;    
-    border-color: #7b2828;
-    
+    border-radius: 4rem;       
 }
+
 #nav-tex1:hover, #nav-tex2:hover, 
 #nav-tex3:hover, #nav-tex4:hover, 
 #nav-tex5:hover {
