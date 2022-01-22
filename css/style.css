@@ -156,8 +156,11 @@ h4 {
 
 
 .concursos {
-    display: inline-block; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     margin: auto;
+    
 }
 
 /* Nosotros */
@@ -227,13 +230,11 @@ h4 {
     display: grid;
     grid-column-start: 2;
     grid-column-end: 2;
+    width: max-content;
+    height: max-content;    
 }
 
-.ubicacion-map {
-    display: inline-block;
-    
 
-}
 
 .ubicacion-title {
     text-align: center;
@@ -508,7 +509,7 @@ h1 {
         justify-content: center;
         width: 30vh;        
         background-color: #F5E1E0;
-        /* margin: auto; */
+       
     }
 
 
@@ -534,8 +535,6 @@ h1 {
     }
 
     .imagen-oferta {
-        /* width: 500px;
-        height: 600px; */
         width: 100%;
         height: 50%;
         border-radius: 10%;
@@ -563,7 +562,9 @@ h1 {
 
     /* articles */    
     .div-article {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         margin-top: 5%;
     }
@@ -585,13 +586,47 @@ h1 {
     
     
     .concursos {
-        display: block; 
+        display: flex;
+        flex-direction: column; 
         text-align: center;
-        width: 50%;
+        
     }
+
+    .ubicacion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-concurso {
+        display: flex;
         
 
+    }
 
+    /* 650 325 */
+
+
+    /* Nosotros */
+
+    #nosotros {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .nosotros-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parrafo-nosotros {
+        font-size: 1rem;        
+    }
+
+    #map-ub {
+        width: 150px;
+        height: 75px;
+    }
 }
 
 
