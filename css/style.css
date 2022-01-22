@@ -15,31 +15,27 @@ body {
     text-decoration: none;
 }
 
-/* comentario prueba */
-
-.main {    
-    /* width: 100%; */
-    background-color: #F5E1E0;
-    padding-bottom: 15px;
-    padding-top: 20px;
-    border-bottom: 2px solid #7b2828;
-    align-items: center;
-}
-
-
-.logo-empresarial {
+#prin-cont {
     display: flex;
-    width: 30vh;
-    background-color: #F5E1E0;
-    margin: auto;
+    align-content: space-around;
 }
 
-
-.main-menu li {
-    display: inline-block;           
+.imagen-logo {
+    width: 5vw;
+    height: 10vh;
 }
 
-.nav-uno {
+.navbar {
+    background-color: #e3b8b5;
+    border-bottom: 2px solid #7b2828;
+}
+
+#navbarNavAltMarkup {
+    justify-content: space-evenly;
+}
+
+.nav-link {
+    text-decoration: none;
     text-align-last: justify;
     color: #7b2828;
     padding: 1.5vh 8vh; 
@@ -48,15 +44,24 @@ body {
     text-decoration: none;    
 }   
 
-
-nav ul li a {
-    margin: auto;
-    padding: 1.5vh 8vh;    
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
+#nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
+#nav-tex5 {
     color: #7b2828;
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0px 2px;
+    transition: all 1s linear;
+    border-radius: 4rem;    
+    border-color: #7b2828;
     
 }
+#nav-tex1:hover, #nav-tex2:hover, 
+#nav-tex3:hover, #nav-tex4:hover, 
+#nav-tex5:hover {
+    background-color: #faf0ef;    
+}
+
 
 .menu-nav-uno {
     font-family: 'Raleway', sans-serif;
