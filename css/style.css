@@ -21,8 +21,7 @@ body {
 }
 
 .imagen-logo {
-    width: 5vw;
-    height: 10vh;
+    width: 5rem;
 }
 
 .navbar {
@@ -31,7 +30,7 @@ body {
 }
 
 #navbarNavAltMarkup {
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .nav-link {
@@ -47,7 +46,7 @@ body {
 #nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
 #nav-tex5 {
     color: #7b2828;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 0px 2px;
@@ -62,12 +61,12 @@ body {
 }
 
 
-.menu-nav-uno {
+/* .menu-nav-uno {
     font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: all 1s linear;
     border-radius: 4rem;        
-}
+} */
 
 .menu-nav-uno:hover {
     background-color: #e3b8b5;
@@ -76,8 +75,34 @@ body {
 
 /* Carrusel de ofertas */
 
+/* .carousel {    
+    display: flex;
+    flex-direction: column;    
+    justify-items: center;
+    margin: auto; 
+    margin-top: 2%;  
+    width: 80vw;
+    height: 60vh;
+    background-color: #e3b8b5;    
+}
+
+.carousel-inner {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 50%;
+    
+} */
+
+
+
 .ofertas {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .contenedor-ofertas {
@@ -86,10 +111,9 @@ body {
 }
 
 .imagen-oferta {
-    /* width: 500px;
-    height: 600px; */
-    width: 18vw;
-    height: 35vh;
+    
+    width: 20vw;
+    height: 50vh;
     border-radius: 10%;
     transition: all 3s ease;
     
@@ -110,11 +134,13 @@ body {
     display: flex;  
     justify-content: center;
     font-size: 2rem;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .encabezado-oferta {
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
+    padding: 0 10%;
+    border-radius: 2rem;
 }
 
 h2 {
@@ -136,6 +162,7 @@ h4 {
 
 .div-article {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     margin-top: 5%;
 }
@@ -159,8 +186,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    margin: auto;
-    
+    margin: 4rem;   
 }
 
 /* Nosotros */
@@ -178,16 +204,16 @@ h4 {
 
 .nosotros-content {
     display: grid;
-    grid-template-columns: 2fr 0.1fr 2fr;
-    grid-template-rows: 4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
     
 }
 
 #nosotros .video {
     
     grid-column-start: 1;
-    grid-column-end: 2;
-    width: 100%;
+    grid-column-end: 1;
+    width: 90%;
     height: 100%;
     padding-left: 5%;
     
@@ -195,10 +221,10 @@ h4 {
 }
 
 .parrafo-nosotros {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    font-size: 2rem;
-    padding-left: 5%;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    font-size: 1rem;
+    padding-left: 0%;
 }
 
 #nosotros .ubicacion {
@@ -626,6 +652,41 @@ h1 {
     #map-ub {
         width: 150px;
         height: 75px;
+    }
+
+    /* Contacto */
+
+    #contacto {        
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }   
+
+    .contacto-title {
+        margin-top: 3rem;
+        text-align: center;
+        text-decoration: none;
+        color: #7b2828;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem; 
+    }
+    
+    .iconos-contacto { 
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        padding-top: 1%;
+        color: #7b2828;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .ig, .fb {
+        font-size: 1rem;        
     }
 }
 
