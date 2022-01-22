@@ -559,8 +559,8 @@ h1 {
 
     /* articles */    
     .div-article {
-        display: block;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         margin-top: 5%;
     }
     
@@ -583,7 +583,8 @@ h1 {
     .concursos {
         display: block; 
         text-align: center;
-        width: 50%;
+        width: 200px;
+        height: 80px;
     }
         
 
