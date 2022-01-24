@@ -415,6 +415,7 @@ footer nav a {
 section h1 {
     display: flex;
 }
+
 .grid-container {
     display: grid;
     grid-template-rows: 1fr;
@@ -474,6 +475,25 @@ h1 {
 
 }
 
+/* Bootstrap productos*/
+
+.main-productos {
+    display: flex;
+    justify-content: center;
+    
+}
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.card-img-top {
+    
+}
 
 /* Oferta */
 
