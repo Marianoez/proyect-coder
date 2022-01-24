@@ -13,6 +13,12 @@ a {
 body {
     background-color: #faf0ef;
     text-decoration: none;
+    background-image: url("../src/assets/logo-cortado-web-op70.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+
 }
 
 #prin-cont {
@@ -61,6 +67,7 @@ body {
 #nav-tex5:hover {
     background-color: #faf0ef;    
 }
+
 
 
 /* .menu-nav-uno {
@@ -397,7 +404,7 @@ footer nav a {
     display: inline;
     margin-top: 1%;
     margin-bottom: 1%;   
-    padding: 0 2rem;
+    padding: 0 53rem;
     border-radius: 5rem;
     text-align: center;
 }
@@ -573,9 +580,9 @@ h1 {
 }
 
 .descripcion-producto {
-    color: #7b2828;
-    text-align: center;
+    color: #7b2828;    
     margin: 2%;
+    justify-content: center;
 }
 
 /* Media Queries */
