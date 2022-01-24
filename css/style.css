@@ -71,14 +71,6 @@ body {
 }
 
 
-
-/* .menu-nav-uno {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    transition: all 1s linear;
-    border-radius: 4rem;        
-} */
-
 .menu-nav-uno:hover {
     background-color: #e3b8b5;
         
@@ -87,34 +79,6 @@ body {
 ul {
     justify-items: center;
 }
-
-/* Carrusel de ofertas */
-
-/* .carousel {    
-    display: flex;
-    flex-direction: column;    
-    justify-items: center;
-    margin: auto; 
-    margin-top: 2%;  
-    width: 80vw;
-    height: 60vh;
-    background-color: #e3b8b5;    
-}
-
-.carousel-inner {
-    margin: 0;
-    padding: 0;
-}
-
-.carousel-item {
-    margin: 0;
-    padding: 0;
-    height: 50%;
-    width: 50%;
-    
-} */
-
-
 
 .ofertas {
     margin-top: 2%;
@@ -257,22 +221,11 @@ h4 {
 
 /* mapa */ 
 
-.ubicacion {
-   /*  width: 75%; */
-    display: inline-block;
+.ubicacion {   
+    display: flex;
+    justify-content: center;
+    
 
-}
-.ubicacion {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr;
-}
-.mapa-ubicacion {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    width: max-content;
-    height: max-content;    
 }
 
 
@@ -407,10 +360,10 @@ footer nav a {
     font-family: 'Raleway', sans-serif;
     background-color: #e3b8b5;
     color: #7b2828;
-    display: inline;
+    display: flex;
     margin-top: 1%;
     margin-bottom: 1%;   
-    padding: 0 53rem;
+    padding: 0 2rem;
     border-radius: 5rem;
     text-align: center;
 }
@@ -419,7 +372,7 @@ footer nav a {
 
 .img-carrito-1, .img-carrito-2, .img-carrito-3, .img-carrito-4 {
     width: 20%;
-    height: 20%;    
+    height: 20%;        
 }   
 
 
@@ -680,8 +633,7 @@ h1 {
         display: flex;
         flex-direction: column; 
         text-align: center;
-        width: 200px;
-        height: 80px;
+        
     }
 
     /* 650 325 */
@@ -704,10 +656,7 @@ h1 {
         font-size: 1rem;        
     }
 
-    #map-ub {
-        width: 150px;
-        height: 75px;
-    }
+    
 
     /* Contacto */
 
@@ -742,6 +691,13 @@ h1 {
     }
     .ig, .fb {
         font-size: 1rem;        
+    }
+
+    /* Productos */
+
+    .main-productos {
+        display: flex;
+        flex-direction: column;
     }
 }
 
