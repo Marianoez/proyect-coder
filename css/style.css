@@ -41,6 +41,7 @@ body {
     justify-content: center;
 }
 
+
 .nav-link {
     text-decoration: none;
     text-align-last: justify;
@@ -80,6 +81,10 @@ body {
 .menu-nav-uno:hover {
     background-color: #e3b8b5;
         
+}
+
+ul {
+    justify-items: center;
 }
 
 /* Carrusel de ofertas */
