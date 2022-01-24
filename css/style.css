@@ -13,33 +13,37 @@ a {
 body {
     background-color: #faf0ef;
     text-decoration: none;
+    background-image: url("../src/assets/logo-cortado-web-op70.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+
 }
 
-/* comentario prueba */
-
-.main {    
-    /* width: 100%; */
-    background-color: #F5E1E0;
-    padding-bottom: 15px;
-    padding-top: 20px;
-    border-bottom: 2px solid #7b2828;
-    align-items: center;
-}
-
-
-.logo-empresarial {
+#prin-cont {
     display: flex;
-    width: 30vh;
-    background-color: #F5E1E0;
-    margin: auto;
+    align-content: space-around;
+}
+
+.imagen-logo {
+    width: 5rem;
+}
+
+.navbar {
+    background-color: #e3b8b5;
+    border-bottom: 2px solid #7b2828;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navbarNavAltMarkup {
+    justify-content: center;
 }
 
 
-.main-menu li {
-    display: inline-block;           
-}
-
-.nav-uno {
+.nav-link {
+    text-decoration: none;
     text-align-last: justify;
     color: #7b2828;
     padding: 1.5vh 8vh; 
@@ -48,32 +52,71 @@ body {
     text-decoration: none;    
 }   
 
-
-nav ul li a {
-    margin: auto;
-    padding: 1.5vh 8vh;    
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
+#nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
+#nav-tex5 {
     color: #7b2828;
-    
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0px 2px;
+    transition: all 1s linear;
+    border-radius: 4rem;       
 }
 
-.menu-nav-uno {
+#nav-tex1:hover, #nav-tex2:hover, 
+#nav-tex3:hover, #nav-tex4:hover, 
+#nav-tex5:hover {
+    background-color: #faf0ef;    
+}
+
+
+
+/* .menu-nav-uno {
     font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: all 1s linear;
     border-radius: 4rem;        
-}
+} */
 
 .menu-nav-uno:hover {
     background-color: #e3b8b5;
         
 }
 
+ul {
+    justify-items: center;
+}
+
 /* Carrusel de ofertas */
 
+/* .carousel {    
+    display: flex;
+    flex-direction: column;    
+    justify-items: center;
+    margin: auto; 
+    margin-top: 2%;  
+    width: 80vw;
+    height: 60vh;
+    background-color: #e3b8b5;    
+}
+
+.carousel-inner {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 50%;
+    
+} */
+
+
+
 .ofertas {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .contenedor-ofertas {
@@ -82,10 +125,9 @@ nav ul li a {
 }
 
 .imagen-oferta {
-    /* width: 500px;
-    height: 600px; */
-    width: 18vw;
-    height: 35vh;
+    
+    width: 20vw;
+    height: 50vh;
     border-radius: 10%;
     transition: all 3s ease;
     
@@ -106,11 +148,13 @@ nav ul li a {
     display: flex;  
     justify-content: center;
     font-size: 2rem;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .encabezado-oferta {
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
+    padding: 0 10%;
+    border-radius: 2rem;
 }
 
 h2 {
@@ -132,6 +176,7 @@ h4 {
 
 .div-article {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     margin-top: 5%;
 }
@@ -152,8 +197,10 @@ h4 {
 
 
 .concursos {
-    display: inline-block; 
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 4rem;   
 }
 
 /* Nosotros */
@@ -171,16 +218,16 @@ h4 {
 
 .nosotros-content {
     display: grid;
-    grid-template-columns: 2fr 0.1fr 2fr;
-    grid-template-rows: 4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
     
 }
 
 #nosotros .video {
     
     grid-column-start: 1;
-    grid-column-end: 2;
-    width: 100%;
+    grid-column-end: 1;
+    width: 90%;
     height: 100%;
     padding-left: 5%;
     
@@ -188,10 +235,10 @@ h4 {
 }
 
 .parrafo-nosotros {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    font-size: 2rem;
-    padding-left: 5%;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    font-size: 1rem;
+    padding-left: 0%;
 }
 
 #nosotros .ubicacion {
@@ -223,13 +270,11 @@ h4 {
     display: grid;
     grid-column-start: 2;
     grid-column-end: 2;
+    width: max-content;
+    height: max-content;    
 }
 
-.ubicacion-map {
-    display: inline-block;
-    
 
-}
 
 .ubicacion-title {
     text-align: center;
@@ -350,40 +395,67 @@ footer nav a {
 
 /* Pagina Carrito.html */
 
+.compras-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .carrito-title {
     font-family: 'Raleway', sans-serif;
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
+    color: #7b2828;
     display: inline;
-    margin-top: 15px;
-    margin: 44.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 53rem;
+    border-radius: 5rem;
     text-align: center;
-
 }
 
 
 
 .img-carrito-1, .img-carrito-2, .img-carrito-3, .img-carrito-4 {
     width: 20%;
-    height: 20%;
-    margin: 20px 0px 20px 560px;
-    
+    height: 20%;    
 }   
 
 
 
 .nombre-producto {
-    margin-left: 40.5%;
+   padding-top: 1%;
+   margin: 0;
 }
 
 .descripcion-producto {
-    margin-left: 40.5%;
+    display: flex;
+    margin-bottom: 2%; 
+    margin-top: 0;   
 }
 
 
 /* Pagina Productos */
-section h1 {
+
+.p-title-con {
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    
 }
+
+.productos-title {
+    font-family: 'Raleway', sans-serif;
+    background-color: #e3b8b5;
+    color: #7b2828;
+    display: inline;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 2rem;
+    border-radius: 5rem;
+    text-align: center;
+}
+
 .grid-container {
     display: grid;
     grid-template-rows: 1fr;
@@ -443,17 +515,37 @@ h1 {
 
 }
 
+/* Bootstrap productos*/
+
+.main-productos {
+    display: flex;
+    justify-content: center;
+    
+}
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.card-img-top {
+    
+}
 
 /* Oferta */
 
-.oferta-title {
-    
+.oferta-title {    
     font-family: 'Raleway', sans-serif;
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
     color: #7b2828;
     display: inline;
-    margin-top: 15px;
-    margin: 46.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 2rem;
+    border-radius: 5rem;
     text-align: center;
 }
 
@@ -464,6 +556,11 @@ h1 {
     overflow: hidden;
 }
 
+.titles-of {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
 
 .img-oferta-1, .img-oferta-2, .img-oferta-3, .img-oferta-4   {
     margin-left: 40%;
@@ -482,15 +579,15 @@ h1 {
 }
 
 .oferta-subtitle {
-    margin-left: 25%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
 }
 
 .descripcion-producto {
-    color: #7b2828;
-    text-align: center;
+    color: #7b2828;    
     margin: 2%;
+    justify-content: center;
 }
 
 /* Media Queries */
@@ -504,7 +601,7 @@ h1 {
         justify-content: center;
         width: 30vh;        
         background-color: #F5E1E0;
-        /* margin: auto; */
+       
     }
 
 
@@ -530,8 +627,6 @@ h1 {
     }
 
     .imagen-oferta {
-        /* width: 500px;
-        height: 600px; */
         width: 100%;
         height: 50%;
         border-radius: 10%;
@@ -561,6 +656,11 @@ h1 {
     .div-article {
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
+=======
+        flex-wrap: wrap;
+        justify-content: center;
+>>>>>>> rama-p1
         margin-top: 5%;
     }
     
@@ -581,12 +681,88 @@ h1 {
     
     
     .concursos {
-        display: block; 
+        display: flex;
+        flex-direction: column; 
         text-align: center;
+<<<<<<< HEAD
         width: 200px;
         height: 80px;
     }
+=======
+        
+    }
 
+    .ubicacion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-concurso {
+        display: flex;
+        
+
+    }
+>>>>>>> rama-p1
+
+    /* 650 325 */
+
+
+    /* Nosotros */
+
+    #nosotros {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .nosotros-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parrafo-nosotros {
+        font-size: 1rem;        
+    }
+
+    #map-ub {
+        width: 150px;
+        height: 75px;
+    }
+
+    /* Contacto */
+
+    #contacto {        
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }   
+
+    .contacto-title {
+        margin-top: 3rem;
+        text-align: center;
+        text-decoration: none;
+        color: #7b2828;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem; 
+    }
+    
+    .iconos-contacto { 
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        padding-top: 1%;
+        color: #7b2828;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .ig, .fb {
+        font-size: 1rem;        
+    }
 }
 
 
