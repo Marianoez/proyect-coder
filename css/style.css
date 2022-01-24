@@ -27,6 +27,8 @@ body {
 .navbar {
     background-color: #e3b8b5;
     border-bottom: 2px solid #7b2828;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 #navbarNavAltMarkup {
@@ -46,7 +48,7 @@ body {
 #nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
 #nav-tex5 {
     color: #7b2828;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 0px 2px;
@@ -381,39 +383,65 @@ footer nav a {
 
 /* Pagina Carrito.html */
 
+.compras-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .carrito-title {
     font-family: 'Raleway', sans-serif;
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
+    color: #7b2828;
     display: inline;
-    margin-top: 15px;
-    margin: 44.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 2rem;
+    border-radius: 5rem;
     text-align: center;
-
 }
 
 
 
 .img-carrito-1, .img-carrito-2, .img-carrito-3, .img-carrito-4 {
     width: 20%;
-    height: 20%;
-    margin: 20px 0px 20px 560px;
-    
+    height: 20%;    
 }   
 
 
 
 .nombre-producto {
-    margin-left: 40.5%;
+   padding-top: 1%;
+   margin: 0;
 }
 
 .descripcion-producto {
-    margin-left: 40.5%;
+    display: flex;
+    margin-bottom: 2%; 
+    margin-top: 0;   
 }
 
 
 /* Pagina Productos */
-section h1 {
+
+.p-title-con {
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+
+.productos-title {
+    font-family: 'Raleway', sans-serif;
+    background-color: #e3b8b5;
+    color: #7b2828;
+    display: inline;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 2rem;
+    border-radius: 5rem;
+    text-align: center;
 }
 
 .grid-container {
@@ -497,14 +525,15 @@ h1 {
 
 /* Oferta */
 
-.oferta-title {
-    
+.oferta-title {    
     font-family: 'Raleway', sans-serif;
-    background-color: #f7db8e;
+    background-color: #e3b8b5;
     color: #7b2828;
     display: inline;
-    margin-top: 15px;
-    margin: 46.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;   
+    padding: 0 2rem;
+    border-radius: 5rem;
     text-align: center;
 }
 
@@ -515,6 +544,11 @@ h1 {
     overflow: hidden;
 }
 
+.titles-of {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
 
 .img-oferta-1, .img-oferta-2, .img-oferta-3, .img-oferta-4   {
     margin-left: 40%;
@@ -533,9 +567,9 @@ h1 {
 }
 
 .oferta-subtitle {
-    margin-left: 25%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
 }
 
 .descripcion-producto {
