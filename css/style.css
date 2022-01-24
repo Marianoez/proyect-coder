@@ -22,8 +22,8 @@ body {
 }
 
 #prin-cont {
-    display: flex;
-    align-content: space-around;
+    display: flex;       
+    justify-content: center;
 }
 
 .imagen-logo {
@@ -53,6 +53,7 @@ body {
 }   
 
 #nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
+
 #nav-tex5 {
     color: #7b2828;
     font-size: 2rem;
@@ -656,11 +657,6 @@ h1 {
     .div-article {
         display: flex;
         flex-direction: column;
-<<<<<<< HEAD
-=======
-        flex-wrap: wrap;
-        justify-content: center;
->>>>>>> rama-p1
         margin-top: 5%;
     }
     
@@ -684,25 +680,9 @@ h1 {
         display: flex;
         flex-direction: column; 
         text-align: center;
-<<<<<<< HEAD
         width: 200px;
         height: 80px;
     }
-=======
-        
-    }
-
-    .ubicacion {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .img-concurso {
-        display: flex;
-        
-
-    }
->>>>>>> rama-p1
 
     /* 650 325 */
 
