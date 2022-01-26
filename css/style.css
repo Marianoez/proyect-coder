@@ -349,12 +349,10 @@ footer nav a {
 
 /* Pagina Carrito.html */
 
-.compras-p {
+.items-compra {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
-
 
 .carrito-title {
     font-family: 'Raleway', sans-serif;
@@ -368,26 +366,11 @@ footer nav a {
     text-align: center;
 }
 
-
-
-.img-carrito-1, .img-carrito-2, .img-carrito-3, .img-carrito-4 {
-    width: 20%;
-    height: 20%;        
-}   
-
-
-
-.nombre-producto {
-   padding-top: 1%;
-   margin: 0;
-}
-
-.descripcion-producto {
+.c-tittle {
     display: flex;
-    margin-bottom: 2%; 
-    margin-top: 0;   
+    flex-direction: column;
+    align-content: center;
 }
-
 
 /* Pagina Productos */
 
@@ -408,31 +391,6 @@ footer nav a {
     padding: 0 2rem;
     border-radius: 5rem;
     text-align: center;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0px;
-}
-
-.grid-image {
-    display: grid;
-    gap: 0%;    
-}
-
-.img-productos {
-    display: grid;
-    width: 18vw;
-    height: 35vh; 
-    margin: auto;
-    text-align: center;
-    border-radius: 10%;
-}
-
-.productos-main {
-    display: inline;
 }
 
 h1 {
@@ -476,6 +434,7 @@ h1 {
     justify-content: center;
     
 }
+
 .card {
     display: flex;
     align-items: center;
@@ -485,9 +444,6 @@ h1 {
 
 }
 
-.card-img-top {
-    
-}
 
 /* Oferta */
 
@@ -541,14 +497,14 @@ h1 {
 .descripcion-producto {
     color: #7b2828;    
     margin: 2%;
-    justify-content: center;
+    text-align: center;
 }
 
 /* Media Queries */
 
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+@media only screen and (min-device-width : 280px) and (max-device-width : 767px) {
 
     .logo-empresarial {
         display: block;
@@ -558,7 +514,6 @@ h1 {
        
     }
 
-
     .main {    
         
         background-color: #F5E1E0;
@@ -567,10 +522,7 @@ h1 {
         border-bottom: 2px solid #7b2828;
         align-items: center;
     }
-    
-    
-       
-    
+        
     .main-menu li {
         display: inline-block;           
     }
@@ -698,7 +650,17 @@ h1 {
     .main-productos {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
+    
+    /* Carrito */
+
+    .items-compra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
