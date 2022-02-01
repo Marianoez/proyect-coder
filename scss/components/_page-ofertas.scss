@@ -1,0 +1,47 @@
+@import '../base/extends';
+
+.oferta-title {    
+    @extend %titles-cfg-std;
+}
+
+.ofertas.principal {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+.titles-of {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.img-oferta-1, .img-oferta-2, .img-oferta-3, .img-oferta-4   {
+    margin-left: 40%;
+    width: 20%;
+    border-radius: 5%;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.ofertas-principal:hover .img-oferta-1,
+.ofertas-principal:hover .img-oferta-2,
+.ofertas-principal:hover .img-oferta-3,
+.ofertas-principal:hover .img-oferta-4 {
+    transform: scale(1.05);    
+    
+}
+
+.oferta-subtitle {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
+    color: $titles-colors;
+}
+
+.descripcion-producto {
+    color: #7b2828;    
+    margin: 2%;
+    text-align: center;
+}

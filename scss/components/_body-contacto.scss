@@ -1,0 +1,51 @@
+@import '../base/extends';
+
+
+.contacto-title {
+    @extend %titles-cfg-std;    
+}
+
+.iconos-contacto { 
+    display: flex;   
+    justify-content: space-around;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #7b2828;   
+}
+
+.phone {
+    margin-bottom: 200px;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 1s linear;
+    border-radius: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+.phone:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #ceb0b0;
+}
+
+.email:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #ceb0b0;
+}
+
+.phone-number, .email-adress {
+    color: #7b2828;
+    padding-left: 10%;
+    font-size: 2rem;
+    width: 300px;
+}
+
+.iconos-contacto div div a {
+    color: #7b2828;
+}

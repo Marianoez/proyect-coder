@@ -1,0 +1,18 @@
+@import '../base/variables';
+@import '../base/extends';
+
+.productos-title {
+    @extend %titles-cfg-std;
+}
+
+.main-productos {
+    @extend %cfg-flex-ctr;   
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem;
+}

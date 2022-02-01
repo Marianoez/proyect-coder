@@ -1,0 +1,8 @@
+.items-compra {
+    display: flex;
+    justify-content: center;
+}
+
+.carrito-title {
+    @extend %titles-cfg-std;
+}

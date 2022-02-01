@@ -1,0 +1,41 @@
+@import '../base/variables';
+@import '../base/extends';
+
+
+.ofertas {
+    margin-top: 2%;
+}
+
+.contenedor-ofertas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-oferta {
+    
+    width: 20vw;
+    height: 50vh;
+    border-radius: 10%;
+    transition: all 3s ease;
+    
+}
+
+.imagenes-oferta:hover .imagen-oferta {
+    transform: scale(1.5);
+}
+
+.imagenes-oferta {
+    overflow: hidden;
+    border-radius: 10%;    
+}
+
+
+.ofertas-title {
+    @extend %titles-cfg-std;
+}
+
+.encabezado-oferta {
+    background-color: #e3b8b5;
+    padding: 0 10%;
+    border-radius: 2rem;
+}
