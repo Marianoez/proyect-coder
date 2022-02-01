@@ -1,10 +1,23 @@
 @import '../base/extends';
+@import '../base/variables';
 
 .oferta-title {    
     @extend %titles-cfg-std;
 }
 
-.ofertas.principal {
+.ofertas-principal {
+    @extend %cfg-flex-ctr; 
+    flex-direction: column;  
+} 
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+/* .ofertas.principal {
     display: grid;
     grid-template-columns: 1f;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -44,4 +57,4 @@
     color: #7b2828;    
     margin: 2%;
     text-align: center;
-}
+} */
