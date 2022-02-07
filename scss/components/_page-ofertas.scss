@@ -1,6 +1,6 @@
 @import '../base/extends';
 @import '../base/variables';
-
+@import '../base/mixings';
 .oferta-title {    
     @extend %titles-cfg-std;
 }
@@ -13,8 +13,7 @@
     text-align: center;
 }
 .card {
-    display: flex;
-    align-items: center;
+    @include dfg-alig(flex, center);
     flex-wrap: nowrap;
     justify-content: center;
     margin: 1rem;

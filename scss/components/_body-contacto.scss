@@ -1,4 +1,6 @@
 @import '../base/extends';
+@import '../base/mixings';
+@import '../base/variables';
 
 
 .contacto-title {
@@ -10,7 +12,7 @@
     justify-content: space-around;
     padding-top: 2%;
     padding-bottom: 2%;
-    color: #7b2828;   
+    color: $titles-colors;   
 }
 
 .phone {
@@ -18,8 +20,7 @@
 }
 
 .phone, .email {
-    display: flex;
-    align-items: center;
+    @include dfg-alig(flex, center);
     justify-content: space-around;
     transition: all 1s linear;
     border-radius: 2rem;
@@ -31,21 +32,21 @@
 
 .phone:hover {
     transform: scale(1.2) rotate(360deg);
-    background-color: #ceb0b0;
+    background-color: $color-hvr-contact;
 }
 
 .email:hover {
     transform: scale(1.2) rotate(360deg);
-    background-color: #ceb0b0;
+    background-color: $color-hvr-contact;
 }
 
 .phone-number, .email-adress {
-    color: #7b2828;
+    color: $titles-colors;
     padding-left: 10%;
     font-size: 2rem;
     width: 300px;
 }
 
 .iconos-contacto div div a {
-    color: #7b2828;
+    color: $titles-colors;
 }

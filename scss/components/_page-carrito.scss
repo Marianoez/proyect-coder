@@ -1,6 +1,5 @@
 .items-compra {
-    display: flex;
-    justify-content: center;
+    @extend %cfg-flex-ctr;
 }
 
 .carrito-title {

@@ -79,7 +79,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -87,7 +86,7 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos {
+.ofertas-principal, .items-compra, .main-productos {
   display: flex;
   justify-content: center;
 }
@@ -131,7 +130,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -139,7 +137,7 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos {
+.ofertas-principal, .items-compra, .main-productos {
   display: flex;
   justify-content: center;
 }
@@ -197,7 +195,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -205,7 +202,7 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos {
+.ofertas-principal, .items-compra, .main-productos {
   display: flex;
   justify-content: center;
 }
@@ -283,7 +280,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -291,7 +287,7 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos {
+.ofertas-principal, .items-compra, .main-productos {
   display: flex;
   justify-content: center;
 }
@@ -304,11 +300,6 @@ body {
   margin: 1rem;
 }
 
-.items-compra {
-  display: flex;
-  justify-content: center;
-}
-
 .oferta-title, .ofertas-title, .contacto-title, .nosotros-title, .ubicacion-title, .productos-title, .carrito-title {
   display: flex;
   flex-direction: column;
@@ -317,7 +308,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -325,7 +315,7 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos {
+.ofertas-principal, .main-productos, .items-compra {
   display: flex;
   justify-content: center;
 }
@@ -397,7 +387,6 @@ footer nav a {
   font-family: "Raleway", sans-serif;
   background-color: #e3b8b5;
   color: #7b2828;
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 0 2rem;
@@ -405,7 +394,7 @@ footer nav a {
   text-align: center;
 }
 
-.main-productos, .ofertas-principal {
+.main-productos, .items-compra, .ofertas-principal {
   display: flex;
   justify-content: center;
 }
