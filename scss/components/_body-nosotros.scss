@@ -1,11 +1,13 @@
 @import '../base/extends';
+@import '../base/mixings';
 
 #nosotros {
     display: inline-block;
     margin: 40px 0px ;
     align-items: center;
+}
 
-}#nosotros {
+#nosotros {
     display: inline-block;
     margin: 40px 0px ;
     align-items: center;
@@ -17,8 +19,7 @@
 }
 
 .nosotros-content {
-    display: flex;
-    flex-direction: row;
+    @include dfg-std(flex, row);
     align-items: center;
     width: 100%;       
 }

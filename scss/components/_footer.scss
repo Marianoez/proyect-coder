@@ -1,8 +1,9 @@
+@import '../base/variables';
 footer {
-    color: #7b2828;
-    border-top: 2px solid #7b2828;
-    border-bottom: 2px solid #7b2828; 
-    background-color: #f5e1e0;
+    color: $titles-colors;
+    border-top: 2px solid $titles-colors;
+    border-bottom: 2px solid $titles-colors; 
+    background-color: $bg-color-footer;
     font-style: italic;
     margin-top: 40px;
     padding: 20px 0px;
@@ -18,12 +19,12 @@ footer h4 {
 }
 
 footer nav div div a {    
-    color: #7b2828;
+    color: $titles-colors;
     font-size: 1.5rem;
 }
 
 footer nav a {
-    color: #7b2828;
+    color: $titles-colors;
     text-decoration: solid;
 }
 
