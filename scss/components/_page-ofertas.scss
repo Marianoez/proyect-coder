@@ -11,6 +11,7 @@
 
 .oferta-subtitle {
     text-align: center;
+    color: $titles-colors;
 }
 .card {
     @include dfg-alig(flex, center);
@@ -18,3 +19,4 @@
     justify-content: center;
     margin: 1rem;
 }
+
