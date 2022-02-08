@@ -8,7 +8,7 @@
 }
 
 .navbar {
-    border-bottom: 2px solid #7b2828;
+    border-bottom: 2px solid $titles-colors;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -21,7 +21,7 @@
 }
 .navbar {
     background-color: #e3b8b5;
-    border-bottom: 2px solid #7b2828;
+    border-bottom: 2px solid $titles-colors;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -44,7 +44,7 @@
 #nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
 
 #nav-tex5 {
-    color: #7b2828;
+    color: $titles-colors;
     font-size: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
