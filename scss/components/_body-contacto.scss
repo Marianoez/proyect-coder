@@ -30,7 +30,7 @@
     text-decoration: none;
 }
 
-.phone:hover {
+/* .phone:hover {
     transform: scale(1.2) rotate(360deg);
     background-color: $color-hvr-contact;
 }
@@ -38,6 +38,14 @@
 .email:hover {
     transform: scale(1.2) rotate(360deg);
     background-color: $color-hvr-contact;
+} */
+
+.phone:hover {
+    background-color: $bg-color-footer;
+}
+
+.email:hover {    
+    background-color: $bg-color-footer;
 }
 
 .phone-number, .email-adress {

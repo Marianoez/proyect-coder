@@ -53,11 +53,11 @@ header {
 #nav-tex1:hover, #nav-tex2:hover,
 #nav-tex3:hover, #nav-tex4:hover,
 #nav-tex5:hover {
-  background-color: #faf0ef;
+  background-color: #f5e1e0;
 }
 
 .menu-nav-uno:hover {
-  background-color: #e3b8b5;
+  background-color: #f5e1e0;
 }
 
 body {
@@ -166,14 +166,21 @@ body {
   text-decoration: none;
 }
 
-.phone:hover {
-  transform: scale(1.2) rotate(360deg);
-  background-color: #ceb0b0;
+/* .phone:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: $color-hvr-contact;
 }
 
 .email:hover {
-  transform: scale(1.2) rotate(360deg);
-  background-color: #ceb0b0;
+    transform: scale(1.2) rotate(360deg);
+    background-color: $color-hvr-contact;
+} */
+.phone:hover {
+  background-color: #f5e1e0;
+}
+
+.email:hover {
+  background-color: #f5e1e0;
 }
 
 .phone-number, .email-adress {
