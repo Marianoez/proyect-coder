@@ -1,0 +1,30 @@
+
+
+.div-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.lanzamientos {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+.image-lanzamiento {
+    margin: 2rem;
+    align-items: center;
+}
+
+.titulo-article {
+    text-align: center;
+}
+
+
+.concursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 4rem;   
+}
