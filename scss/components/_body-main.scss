@@ -11,13 +11,11 @@
     justify-content: space-evenly;
 }
 
-.imagen-oferta {
-    
+.imagen-oferta {    
     width: 20vw;
     height: 50vh;
     border-radius: 10%;
     transition: all 3s ease;
-    
 }
 
 .imagenes-oferta:hover .imagen-oferta {
@@ -32,10 +30,11 @@
 
 .ofertas-title {
     @extend %titles-cfg-std;
+    margin-top: 4%;
 }
 
 .encabezado-oferta {
-    background-color: #e3b8b5;
+    background-color: $bg-color-header;
     padding: 0 10%;
     border-radius: 2rem;
 }

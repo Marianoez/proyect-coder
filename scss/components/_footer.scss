@@ -1,3 +1,5 @@
+@import '../base/extends';
+@import '../base/mixings';
 @import '../base/variables';
 footer {
     color: $titles-colors;
@@ -8,14 +10,15 @@ footer {
     margin-top: 40px;
     padding: 20px 0px;
     padding-left: 1rem;
+    text-decoration: none;
 }
 footer h4 {
     padding-bottom: 15px;
 }
 
-.iconos-container:hover .fb,
-.iconos-container:hover .ig {
-    transform: translatex(10%);
+.ig:hover, .fb:hover {
+    background-color: $bg-color-header;
+    color: $titles-colors;    
 }
 
 footer nav div div a {    
@@ -25,22 +28,27 @@ footer nav div div a {
 
 footer nav a {
     color: $titles-colors;
-    text-decoration: solid;
+    text-decoration: none;
 }
 
 .ig, .fb {
-    display: flex;
-    align-items: center;
-    margin-left: 2%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: all 1.5s ease-in-out;
+    @include dfg-alig(inherit, center);
+    width: 12%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all 1s linear;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding: 0.5%;
 }
 
-.fb {
-    transition: all 1.5s ease-in;
-}
 
 .ig-text, .fb-text {
     margin-left: 1%;
+}
+
+.copyright{
+    text-decoration: none;
+    color: $titles-colors;
 }
