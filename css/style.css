@@ -639,6 +639,17 @@ footer nav a {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Pagina Ofertas */
+  .ofertas-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titles-of {
+    margin: 0 1%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
