@@ -129,8 +129,8 @@ body {
 .offers {
   margin: 0 auto;
   background-color: aqua;
-  max-width: 700px;
-  max-height: 200px;
+  width: 700px;
+  height: 200px;
 }
 
 .oferta-title, .carrito-title, .productos-title, .ubicacion-title, .nosotros-title, .contacto-title, .ofertas-title {
