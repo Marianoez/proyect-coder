@@ -96,6 +96,7 @@ body {
 }
 
 .contenedor-ofertas {
+  padding-top: 1.5%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -111,13 +112,22 @@ body {
   transform: scale(1.5);
 }
 
+.of1, .of2, .of3, .of4 {
+  padding: 1%;
+}
+
 .imagenes-oferta {
   overflow: hidden;
   border-radius: 10%;
 }
+.imagenes-oferta h3 {
+  text-align: center;
+  color: #7b2828;
+}
 
 .ofertas-title {
-  margin-top: 4%;
+  margin-top: 2%;
+  padding-bottom: 2%;
 }
 
 .encabezado-oferta {
@@ -233,6 +243,7 @@ body {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  padding-top: 2%;
 }
 
 #nosotros .video {
@@ -263,6 +274,7 @@ body {
   display: inline-block;
   margin: auto;
   text-align: center;
+  color: #7b2828;
 }
 
 .image-lanzamiento {

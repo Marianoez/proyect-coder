@@ -21,7 +21,8 @@
 .nosotros-content {
     @include dfg-std(flex, row);
     align-items: center;
-    width: 100%;       
+    width: 100%; 
+    padding-top: 2%;      
 }
 
 #nosotros .video {    
