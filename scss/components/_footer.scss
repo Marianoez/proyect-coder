@@ -2,18 +2,19 @@
 @import '../base/mixings';
 @import '../base/variables';
 footer {
+    justify-items: center;
+    text-align: center;
     color: $titles-colors;
     border-top: 2px solid $titles-colors;
     border-bottom: 2px solid $titles-colors; 
     background-color: $bg-color-footer;
     font-style: italic;
-    margin-top: 40px;
-    padding: 20px 0px;
-    padding-left: 1rem;
+    padding-top: 1%;
+    margin-top: 2%;   
     text-decoration: none;
 }
 footer h4 {
-    padding-bottom: 15px;
+    padding-bottom: 1%;
 }
 
 .ig:hover, .fb:hover {
@@ -32,11 +33,12 @@ footer nav a {
 }
 
 .ig, .fb {
-    @include dfg-alig(inherit, center);
-    width: 12%;
-    margin-left: 1%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    @include dfg-alig(flex, center);
+    justify-content: center ;
+    width: auto;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     transition: all 1s linear;
     border-radius: 2rem;
     text-decoration: none;
