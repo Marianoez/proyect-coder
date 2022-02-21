@@ -3,6 +3,19 @@
 @import '../base/variables';
 @media only screen and (min-device-width : 280px) and (max-device-width : 767px) {
 
+    body {  
+        background-color: $bg-color-body;
+        text-decoration: none;
+        background-image: url("../src/assets/logo-cortado-web-op70.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: contain;
+        margin: 0;
+        padding: 0;      
+    }
+
+
     .logo-empresarial {
         display: block;
         justify-content: center;
