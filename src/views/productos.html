@@ -30,7 +30,7 @@
 
 <body>
     <!-- Inicio Header -->
-    <header>
+    <header id="header-prin">
         <nav class="navbar sticky-top navbar-expand-lg navbar-light">
             <div class="container-fluid" id="prin-cont">
                 <a class="navbar-brand" href="../../index.html"><img class="imagen-logo" src="../assets/logo-cortado-web.png" alt="logo de la empresa"></a>
@@ -58,63 +58,11 @@
 
 
     <!-- Cards de productos -->
+    <input id="showAll" type="button" value="Mostrar todos los Productos"><br><br>
+    <input id="hideAll" type="button" value="Ocultar todos los Productos">
 
-    <section class="main-productos">
-        <div class="card" style="width: 18rem;">
-            <img src="../assets/Corregidas/bozal-okk.jpg" class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
-            <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
-            <div class="card-body">
-                <h5 class="card-title">Bozal Cuero</h5>
-                <p class="card-text">Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Precio: $ 3.500,00</li>
-                <div class="card-body">
-                    <a href="./carrito.html" class="card-link"><button type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
-                </div>
-        </div>
+    <section id="productosmain" class="main-productos">
 
-        <div class="card" style="width: 18rem;">
-            <img src="../assets/Corregidas/freno-ok.png" class="card-img-top" alt="Freno de Hierro, Polo y Salto">
-            <!-- SEO, agregamos palabras clave polo y salto. -->
-            <div class="card-body">
-                <h5 class="card-title">Freno Hierro</h5>
-                <p class="card-text">Freno de Hierro cromado con rueda.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Precio: $ 4.000,00</li>
-                <div class="card-body">
-                    <a href="./carrito.html" class="card-link"><button type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
-                </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="../assets/Corregidas/montura-ok.png" class="card-img-top" alt="Montura de Cuero, ideal Salto Exhibición">
-            <!-- SEO, agregamos palabras clave salto exhibición -->
-            <div class="card-body">
-                <h5 class="card-title">Montura de Cuero</h5>
-                <p class="card-text">Montura de cuero americana, con estriberas.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Precio: $ 30.000,00</li>
-                <div class="card-body">
-                    <a href="./carrito.html" class="card-link"><button type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
-                </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="../assets/Corregidas/herradura-ok.jpg" class="card-img-top" alt="Herraduras de hierro, Caballo Carreras">
-            <!-- SEO, agregamos palabra clave caballo carreras -->
-            <div class="card-body">
-                <h5 class="card-title">Herraduras Hierro</h5>
-                <p class="card-text">Herraduras de hierro, varios tamaños.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Precio: $ 2.500,00</li>
-                <div class="card-body">
-                    <a href="./carrito.html" class="card-link"><button type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
-                </div>
-        </div>
     </section>
 
 
@@ -167,7 +115,7 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- JavaScript -->
-    <script src="../../js/pruebas.js"></script>
+    <script src="../../js/js.js"></script>
 
 
 </body>

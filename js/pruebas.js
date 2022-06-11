@@ -15,4 +15,4 @@ document.body.appendChild(prueba); */
 
 let prueba2 = document.getElementById('s11');
 
-prueba2.innerHTML = '<h1>La OFERTA</h1>'
+prueba2.innerText = 'La OFERTA'
