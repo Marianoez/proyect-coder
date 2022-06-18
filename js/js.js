@@ -1,8 +1,12 @@
 const allProductos = [{ cod: 1, nombre: 'Bozal de Cuero', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3500, stock: 2 }, { cod: 2, nombre: 'Freno de Hierro', descripcion: 'Freno de hierro cromado con rueda.', imgurl: '../assets/Corregidas/freno-ok.png', precio: 4000, stock: 4 }, { cod: 3, nombre: 'Montura de Cuero', descripcion: 'Montura de cuero americana, con estriberas.', imgurl: '../assets/Corregidas/montura-ok.png', precio: 30000, stock: 4 }, { cod: 4, nombre: 'Herraduras de Hierro', descripcion: 'Herraduras de hierro varios talles', imgurl: '../assets/Corregidas/herradura-ok.jpg', precio: 2500, stock: 5 }, ];
 
 function showAllp() {
-    const a = document.getElementById('productosmain');
-    console.log(a)
+    const a = document.getElementById('productosmain2');
+    console.log(a);
+    const c = document.createElement("div");
+    console.log(c);
+    a.appendChild(c);
+    c.setAttribute("id", "wtf");
 
     for (let element of allProductos) {
         const b = document.createElement('div');
@@ -18,29 +22,41 @@ function showAllp() {
             <li class="list-group-item">Stock: ${element.stock}</li>    
             <li class="list-group-item">Precio $ ${element.precio}</li>
             <div class="card-body">
-                <a href="./carrito.html" class="card-link"><button type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
+                <button id="btnAdd${element.cod}" type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
             </div>
         </div>`;
-        a.append(b);
+        c.appendChild(b);
+
+        let btnAgregar = document.getElementById(`btnAdd${element.cod}`)
+        btnAgregar.addEventListener("click", () => {
+
+        })
     }
 }
 
 function ocultarProductos() {
-    const a = document.getElementById('productosmain')
-    a.remove();
+    const ab = document.getElementById("wtf");
+    console.log(ab)
+    ab.remove();
 }
 
-const $saBtn = document.getElementById('showAll');
 
-$saBtn.onclick = () => {
+const saBtn = document.getElementById('showAll');
+console.log(saBtn);
+
+/* saBtn.onclick = () => {
     showAllp();
-}
+} */
+saBtn.addEventListener('click', showAllp)
 
-const $haBtn = document.getElementById('hideAll');
+const haBtn = document.getElementById('hideAll');
+console.log(haBtn);
 
-$haBtn.onclick = () => {
+haBtn.addEventListener("click", ocultarProductos)
+
+/* haBtn.onclick = () => {
     ocultarProductos();
-}
+} */
 
 
 
