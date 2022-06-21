@@ -43,9 +43,7 @@ function ocultarProductos() {
 const saBtn = document.getElementById('showAll');
 console.log(saBtn);
 
-/* saBtn.onclick = () => {
-    showAllp();
-} */
+
 saBtn.addEventListener('click', showAllp)
 
 const haBtn = document.getElementById('hideAll');
@@ -53,9 +51,6 @@ console.log(haBtn);
 
 haBtn.addEventListener("click", ocultarProductos)
 
-/* haBtn.onclick = () => {
-    ocultarProductos();
-} */
 
 
 
