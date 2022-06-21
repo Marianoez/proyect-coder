@@ -10,8 +10,7 @@ function showAllp() {
 
     for (let element of allProductos) {
         const b = document.createElement('div');
-
-        b.innerHTML = `<div class="card" "card-img-top" style="width: 18rem;">
+        b.innerHTML = `<div class="card" style="width: 18rem;">
         <img src=${element.imgurl} class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
         <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
         <div class="card-body">
