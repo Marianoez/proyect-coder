@@ -20,15 +20,18 @@ const productContainer = document.getElementById("product-main")
 const searcher = document.getElementById('find')
 const showOffers = document.getElementById('showOffer')
 const showAll = document.getElementById('showAll')
+const cartDiv = document.getElementById('cart')
+const productCart = document.getElementById("items-compra")
+const cart = [{ cod: 15, nombre: 'OFERTA COMEDERO', size: 'Discontinuos', descripcion: 'Comedero PVC inyectado origen USA, ultimas unidades.', imgurl: '../assets/oferta-comedero.jpg', precio: 13000, stock: 4 }];
 
 
 
 function showAllp(products) {
     productContainer.innerHTML = "";
     products.forEach(element => {
-        let div = document.createElement('div')
-        div.className = 'product';
-        div.innerHTML = `<div class="card" style="width: 18rem;">
+        let newDiv = document.createElement('div')
+        newDiv.className = 'product';
+        newDiv.innerHTML = `<div class="card" style="width: 18rem;">
         <img src=${element.imgurl} class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
         <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
         <div class="card-body">
@@ -40,15 +43,15 @@ function showAllp(products) {
             <li class="list-group-item">Precio $ ${element.precio}</li>
             <li class="list-group-item">Talle: ${element.size}</li>
             <div class="card-body">
-                <button id="btnAdd${element.cod}" type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
+                <button id="btnAdd1${element.cod}" type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
             </div>
         </div>`;
 
-        productContainer.appendChild(div);
-        let btnAdd = document.getElementById(`btnAdd${element.cod}`)
-        console.log(element.cod)
-        console.log(btnAdd)
-        console.log(btnAdd);
+        productContainer.appendChild(newDiv);
+        let btnAdd = document.getElementById(`btnAdd1${element.cod}`)
+        btnAdd.addEventListener('click', () => {
+            addToCart(element.cod)
+        })
 
     });
 }
@@ -68,7 +71,39 @@ showAll.addEventListener('click', () => {
     showAllp(allProducts);
 })
 
+function addToCart(cod) {
+    let addProduct = allProducts.find(item => item.cod === cod)
+    console.log(addProduct);
+    cart.push(addProduct);
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
 
+function showCart(addProduct) {
+    cartDiv.innerHTML = "";
+    let getCart = cart;
+    console.log('s');
+    getCart.forEach(element => {
+        let div = document.createElement('div')
+        div.className = 'product';
+        div.innerHTML = `<div class="card" style="width: 18rem;">
+        <img src=${element.imgurl} class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
+        <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
+        <div class="card-body">
+            <h5 class="card-title">${element.nombre}</h5>
+            <p class="card-text">${element.descripcion}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Stock: ${element.stock}</li>    
+            <li class="list-group-item">Precio $ ${element.precio}</li>
+            <li class="list-group-item">Talle: ${element.size}</li>
+            <div class="card-body">
+                <button id="btnAdd${element.cod}" type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
+            </div>
+        </div>`;
+    })
+    console.log('ejecutandose')
+}
+showCart();
 
 
 
