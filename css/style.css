@@ -86,9 +86,10 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .items-compra, .main-productos {
+.ofertas-principal, .items-compra, .main-productos, .buttons1 {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .ofertas {
@@ -158,9 +159,10 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .items-compra, .main-productos {
+.ofertas-principal, .items-compra, .main-productos, .buttons1 {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .iconos-contacto {
@@ -221,9 +223,10 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .items-compra, .main-productos {
+.ofertas-principal, .items-compra, .main-productos, .buttons1 {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #nosotros {
@@ -311,9 +314,10 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .items-compra, .main-productos {
+.ofertas-principal, .items-compra, .main-productos, .buttons1 {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -339,9 +343,10 @@ body {
   text-align: center;
 }
 
-.ofertas-principal, .main-productos, .items-compra {
+.ofertas-principal, .buttons1, .main-productos, .items-compra {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .oferta-subtitle {
@@ -372,9 +377,10 @@ body {
   text-align: center;
 }
 
-.main-productos, .items-compra, .ofertas-principal {
+.buttons1, .main-productos, .items-compra, .ofertas-principal {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -447,9 +453,10 @@ footer nav a {
   text-align: center;
 }
 
-.main-productos, .items-compra, .ofertas-principal {
+.buttons1, .main-productos, .items-compra, .ofertas-principal {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .ofertas-title, .contacto-title, .nosotros-title, .ubicacion-title, .productos-title, .carrito-title, .oferta-title {
@@ -467,9 +474,10 @@ footer nav a {
   text-align: center;
 }
 
-.main-productos, .items-compra, .ofertas-principal {
+.buttons1, .main-productos, .items-compra, .ofertas-principal {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-device-width: 280px) and (max-device-width: 767px) {
