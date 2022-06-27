@@ -22,7 +22,9 @@ const showOffers = document.getElementById('showOffer')
 const showAll = document.getElementById('showAll')
 const cartDiv = document.getElementById('cart')
 const productCart = document.getElementById("items-compra")
-const cart = [{ cod: 15, nombre: 'OFERTA COMEDERO', size: 'Discontinuos', descripcion: 'Comedero PVC inyectado origen USA, ultimas unidades.', imgurl: '../assets/oferta-comedero.jpg', precio: 13000, stock: 4 }];
+const cart = [];
+
+
 
 
 
@@ -50,6 +52,13 @@ function showAllp(products) {
         productContainer.appendChild(newDiv);
         let btnAdd = document.getElementById(`btnAdd1${element.cod}`)
         btnAdd.addEventListener('click', () => {
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Producto agregado con exito!',
+                showConfirmButton: false,
+                timer: 1500
+            })
             addToCart(element.cod)
         })
 
@@ -59,6 +68,13 @@ showAllp(allProducts);
 
 searcher.addEventListener('input', (product) => {
     let searching = allProducts.filter(element => element.nombre.toLocaleLowerCase().includes(product.target.value.toLocaleLowerCase()))
+    if (searching == false) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `No existe producto que coincida con su busqueda, pruebe otra referencia!`,
+        })
+    }
     showAllp(searching)
 });
 
@@ -77,79 +93,3 @@ function addToCart(cod) {
     cart.push(addProduct);
     localStorage.setItem('cart', JSON.stringify(cart))
 }
-
-function showCart(addProduct) {
-    cartDiv.innerHTML = "";
-    let getCart = cart;
-    console.log('s');
-    getCart.forEach(element => {
-        let div = document.createElement('div')
-        div.className = 'product';
-        div.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src=${element.imgurl} class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
-        <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
-        <div class="card-body">
-            <h5 class="card-title">${element.nombre}</h5>
-            <p class="card-text">${element.descripcion}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Stock: ${element.stock}</li>    
-            <li class="list-group-item">Precio $ ${element.precio}</li>
-            <li class="list-group-item">Talle: ${element.size}</li>
-            <div class="card-body">
-                <button id="btnAdd${element.cod}" type="button" class="btn btn-outline-secondary">Agregar al Carrito!</button></a>
-            </div>
-        </div>`;
-    })
-    console.log('ejecutandose')
-}
-showCart();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* let contacto1 = document.getElementsByClassName('footer');
-contacto1[0].remove(); */
-
-/* class Producto {
-    constructor(cod, nombre, descripcion, imagenurl, precio, stock) {
-        this.cod = cod;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.imgurl = imagenurl;
-        this.precio = Number(precio);
-        this.stock = stock;
-    }
-    precioFinal() {
-        return this.precio * 1.21;
-    }
-} */
