@@ -10,9 +10,8 @@ function recuperar() {
 
     recuperarLS.forEach(element => {
         cart.push(element)
-
         showCart(element)
-        modals(element)
+            /* modals(element) */
 
     })
     const totalBuy = recuperarLS.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
@@ -20,9 +19,6 @@ function recuperar() {
     p.innerText = `TOTAL: ${totalBuy}`
     console.log(totalBuy)
 }
-
-
-
 
 function showCart(car) {
     cartHTML.innerHTML = ""
@@ -62,7 +58,7 @@ function showCart(car) {
     })
 
 }
-console.log(cart);
+/* console.log(cart);
 
 function modals(car) {
     let modal = document.getElementById('cuerpoModal')
@@ -84,7 +80,7 @@ function modals(car) {
                     </div>
                 </div>`;
     modal.appendChild(div)
-}
+} */
 
 // cart.filter(item => item.cod !== btn.cod)
 // localStorage.setItem('cart', JSON.stringify(cart))
@@ -96,10 +92,8 @@ function modals(car) {
 // sweetAlert ==> compra finalizada! nro de Orden:09s8df09s7f0s7df0sd70
 
 
-
-
 /* clearBtn.addEventListener('click', () => {
     let cartEmpty = ""
     localStorage.setItem('cart', JSON.stringify(cartEmpty))
     showCart(addProduct)
-}) */
+}*/
