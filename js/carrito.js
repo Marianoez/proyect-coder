@@ -1,8 +1,23 @@
 let cartHTML = document.getElementById('cart')
 const clearBtn = document.getElementById('clearCart')
-
+const payBtn = document.getElementById('payBtn')
 let cart = []
 recuperar()
+
+payBtn.addEventListener('click', () => {
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'MUCHAS GRACIAS POR SU COMPRA!!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    cart = []
+    localStorage.setItem('cart', JSON.stringify(cart))
+    recuperar()
+    cartHTML.innerHTML = ""
+
+})
 
 
 function recuperar() {
