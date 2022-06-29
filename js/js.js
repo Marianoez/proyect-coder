@@ -84,23 +84,45 @@ showAll.addEventListener('click', () => {
 })
 
 function addToCart(cod) {
-    let addProduct = allProducts.find(item => item.cod === cod)
-    console.log(addProduct.cantidad)
-    if (addProduct.stock > 0) {
-        addProduct.cantidad = addProduct.cantidad + 1;
-        addProduct.stock--
-            if (cart)
-                cart.push(addProduct)
-        showAllp(allProducts)
+    let existe = cart.find(item => item.cod === cod)
+    if (existe) {
+        if (existe.stock == 0) {
+            existe.stock = 0
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `Producto sin Stock Disponiblle!`,
+            })
+            let btnAdd = document.getElementById(`btnAdd1${existe.cod}`)
+            btnAdd.style.display = 'none'
+        } else {
+            existe.cantidad += 1
+            existe.stock--
+                console.log(existe.stock);
+            showAllp(allProducts)
+        }
+
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: `Producto sin Stock Disponiblle!`,
-        })
+        let addProduct = allProducts.find(item => item.cod === cod)
+        console.log(addProduct.cantidad)
+        console.log(addProduct.stock)
+        if (addProduct.stock > 0) {
+            addProduct.cantidad = addProduct.cantidad + 1;
+            addProduct.stock--
+                cart.push(addProduct)
+            showAllp(allProducts)
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `Producto sin Stock Disponiblle!`,
+            })
+        }
     }
+
+
     localStorage.setItem('cart', JSON.stringify(cart))
-    console.log(addProduct.cantidad)
+        // console.log(addProduct.cantidad)
 
 
 
