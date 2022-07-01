@@ -48,13 +48,13 @@ function showAllp(products) {
         productContainer.appendChild(newDiv);
         let btnAdd = document.getElementById(`btnAdd1${element.cod}`)
         btnAdd.addEventListener('click', () => {
-            Swal.fire({
+            /* Swal.fire({
                 position: 'top',
                 icon: 'success',
                 title: 'Producto agregado con exito!',
                 showConfirmButton: false,
                 timer: 1500
-            })
+            }) */
             addToCart(element.cod)
         })
 
@@ -135,3 +135,22 @@ function addToCart(cod) {
     cart.push(addProduct);
     localStorage.setItem('cart', JSON.stringify(cart)) */
 }
+
+/* const resp = await fetch("/data.json")
+    .then(res => res.json())
+    .then(data => {console.log(data)})
+
+
+
+
+const pedirPosts = async ()=> {
+    const resp = await fatch('https://jsonplaceholder.typicode.com/posts)'
+    const data = await resp.json()
+    console.log(data)
+}
+
+
+
+
+
+ */

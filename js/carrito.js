@@ -1,6 +1,11 @@
 let cartHTML = document.getElementById('cart')
 const clearBtn = document.getElementById('clearCart')
 const payBtn = document.getElementById('payBtn')
+
+clearBtn.addEventListener('click', () => {
+    cleanCart();
+})
+
 let cart = []
 recuperar()
 
@@ -21,12 +26,13 @@ payBtn.addEventListener('click', () => {
 
 
 function recuperar() {
+    cartHTML.innerHTML = ""
     let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
-
     recuperarLS.forEach(element => {
-        cart.push(element)
         showCart(element)
-            /* modals(element) */
+        cart.push(element)
+
+        /* modals(element) */
 
     })
     const totalBuy = recuperarLS.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
@@ -35,8 +41,13 @@ function recuperar() {
     console.log(totalBuy)
 }
 
+function cleanCart() {
+    localStorage.clear()
+    recuperar()
+}
+
 function showCart(car) {
-    cartHTML.innerHTML = ""
+
     let div = document.createElement('div')
     div.className = 'product';
     div.innerHTML = `<div class="card" style="width: 18rem;">
@@ -58,8 +69,9 @@ function showCart(car) {
 
     let btnDelete = document.getElementById(`btnDelete${car.cod}`)
 
-    btnDelete.addEventListener('click', () => {
+    /* btnDelete.addEventListener('click', () => {
         console.log(car.cod);
+        console.log(cart)
         if (car.cantidad == 1) {
             btnDelete.parentElement.parentElement.parentElement.remove();
             cart = cart.filter(item => item.cod !== car.cod)
@@ -70,7 +82,26 @@ function showCart(car) {
             localStorage.setItem('cart', JSON.stringify(cart))
             recuperar()
         }
+    }) */
+    btnDelete.addEventListener('click', () => {
+        console.log(car.cod);
+        console.log(cart)
+        if (car.cantidad == 1) {
+            btnDelete.parentElement.parentElement.parentElement.remove();
+            cart = cart.filter(item => item.cod !== car.cod)
+            localStorage.setItem('cart', JSON.stringify(cart))
+            recuperar()
+        } else {
+            car.cantidad -= 1
+            cart = cart.filter(item => item.cod !== car.cod)
+            console.log('antes push', cart)
+            cart.push(car)
+            console.log('despues push', cart)
+            localStorage.setItem('cart', JSON.stringify(cart))
+            recuperar()
+        }
     })
+
 
 }
 /* console.log(cart);
