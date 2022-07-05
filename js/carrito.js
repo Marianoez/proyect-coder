@@ -1,3 +1,5 @@
+/* const { forEach } = require("lodash"); */
+
 let cartHTML = document.getElementById('cart')
 const clearBtn = document.getElementById('clearCart')
 const payBtn = document.getElementById('payBtn')
@@ -5,9 +7,9 @@ const payBtn = document.getElementById('payBtn')
 clearBtn.addEventListener('click', () => {
     cleanCart();
 })
-
 let cart = []
 recuperar()
+
 
 payBtn.addEventListener('click', () => {
     Swal.fire({
@@ -31,9 +33,6 @@ function recuperar() {
     recuperarLS.forEach(element => {
         showCart(element)
         cart.push(element)
-
-        /* modals(element) */
-
     })
     const totalBuy = recuperarLS.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     let p = document.getElementById('total1')

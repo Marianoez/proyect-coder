@@ -24,6 +24,19 @@ const cartDiv = document.getElementById('cart')
 const productCart = document.getElementById("items-compra")
 const cart = []
 
+
+recuperar()
+
+function recuperar() {
+    let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
+    recuperarLS.forEach(element => {
+        cart.push(element)
+    })
+}
+
+
+
+
 function showAllp(products) {
     productContainer.innerHTML = "";
     products.forEach(element => {
