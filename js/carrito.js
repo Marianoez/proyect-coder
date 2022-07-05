@@ -90,6 +90,7 @@ function showCart(car) {
             cart = cart.filter(item => item.cod !== car.cod)
             localStorage.setItem('cart', JSON.stringify(cart))
             recuperar()
+
         } else {
             car.cantidad -= 1
             cart = cart.filter(item => item.cod !== car.cod)

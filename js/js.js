@@ -1,3 +1,6 @@
+/* import { getData } from "./getData";
+ */
+
 const allProducts = [{ cod: 1, nombre: 'Bozal de Cuero', size: '1', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3200, stock: 5, cantidad: 0 },
     { cod: 2, nombre: 'Bozal de Cuero', size: '2', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3300, stock: 2, cantidad: 0 },
     { cod: 3, nombre: 'Bozal de Cuero', size: '3', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3500, stock: 3, cantidad: 0 },
