@@ -1,7 +1,6 @@
-/* import { getData } from "./getData";
- */
+import { getData } from "./getData";
 
-const allProducts = [{ cod: 1, nombre: 'Bozal de Cuero', size: '1', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3200, stock: 5, cantidad: 0 },
+/* const allProducts = [{ cod: 1, nombre: 'Bozal de Cuero', size: '1', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3200, stock: 5, cantidad: 0 },
     { cod: 2, nombre: 'Bozal de Cuero', size: '2', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3300, stock: 2, cantidad: 0 },
     { cod: 3, nombre: 'Bozal de Cuero', size: '3', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3500, stock: 3, cantidad: 0 },
     { cod: 4, nombre: 'Freno de Hierro', size: '1', descripcion: 'Freno de hierro cromado con rueda.', imgurl: '../assets/Corregidas/freno-ok.png', precio: 4000, stock: 4, cantidad: 0 },
@@ -16,9 +15,9 @@ const allProducts = [{ cod: 1, nombre: 'Bozal de Cuero', size: '1', descripcion:
     { cod: 13, nombre: 'OFERTA HERRADURAS', size: 'Discontinuos', descripcion: 'Oferta semanal Herraduras de Aluminio, Súper livianas, números discontinuos', imgurl: '../assets/oferta-herraduras.jpg', precio: 2800, stock: 7, cantidad: 0 },
     { cod: 14, nombre: 'OFERTA MANTA', size: 'Discontinuos', descripcion: 'Manta doble tela para exteriores, todas las estaciones.', imgurl: '../assets/oferta-manta.jpg', precio: 5800, stock: 8, cantidad: 0 },
     { cod: 15, nombre: 'OFERTA COMEDERO', size: 'Discontinuos', descripcion: 'Comedero PVC inyectado origen USA, ultimas unidades.', imgurl: '../assets/oferta-comedero.jpg', precio: 13000, stock: 4, cantidad: 0 },
-];
+]; */
 
-
+const allProducts = getData()
 const productContainer = document.getElementById("product-main")
 const searcher = document.getElementById('find')
 const showOffers = document.getElementById('showOffer')
@@ -27,10 +26,15 @@ const cartDiv = document.getElementById('cart')
 const productCart = document.getElementById("items-compra")
 const cart = []
 
+document.addEventListener("DOMContentLoaded", () => {
+    showAllp(allProducts)
+    recuperar2()
+})
 
-recuperar()
 
-function recuperar() {
+recuperar2()
+
+function recuperar2() {
     let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
     recuperarLS.forEach(element => {
         cart.push(element)
@@ -76,7 +80,7 @@ function showAllp(products) {
 
     });
 }
-showAllp(allProducts);
+
 
 searcher.addEventListener('input', (product) => {
     let searching = allProducts.filter(element => element.nombre.toLocaleLowerCase().includes(product.target.value.toLocaleLowerCase()))
