@@ -1,4 +1,4 @@
-import { getData } from "./getData";
+import { getData } from "./getData.js";
 
 /* const allProducts = [{ cod: 1, nombre: 'Bozal de Cuero', size: '1', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3200, stock: 5, cantidad: 0 },
     { cod: 2, nombre: 'Bozal de Cuero', size: '2', descripcion: 'Bozal de cuero, con hebillas cromadas, disponibles en 3 tamaños.', imgurl: '../assets/Corregidas/bozal-okk.jpg', precio: 3300, stock: 2, cantidad: 0 },
@@ -17,7 +17,7 @@ import { getData } from "./getData";
     { cod: 15, nombre: 'OFERTA COMEDERO', size: 'Discontinuos', descripcion: 'Comedero PVC inyectado origen USA, ultimas unidades.', imgurl: '../assets/oferta-comedero.jpg', precio: 13000, stock: 4, cantidad: 0 },
 ]; */
 
-const allProducts = getData()
+const allProducts = await getData();
 const productContainer = document.getElementById("product-main")
 const searcher = document.getElementById('find')
 const showOffers = document.getElementById('showOffer')
@@ -26,13 +26,13 @@ const cartDiv = document.getElementById('cart')
 const productCart = document.getElementById("items-compra")
 const cart = []
 
-document.addEventListener("DOMContentLoaded", () => {
-    showAllp(allProducts)
-    recuperar2()
-})
 
 
+showAllp(allProducts)
 recuperar2()
+
+
+
 
 function recuperar2() {
     let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
