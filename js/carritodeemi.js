@@ -1,3 +1,5 @@
+/* const { forEach } = require("lodash"); */
+
 let cartHTML = document.getElementById('cart')
 const clearBtn = document.getElementById('clearCart')
 const payBtn = document.getElementById('payBtn')
@@ -33,14 +35,15 @@ function recuperar() {
         cart.push(element)
     })
     totalCarrito()
+
 }
 
 function totalCarrito() {
     const totalBuy = cart.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     let p = document.getElementById('total1')
     p.innerText = `TOTAL: ${totalBuy}`
-}
 
+}
 
 function cleanCart() {
     localStorage.clear()
@@ -60,7 +63,7 @@ function showCart(car) {
                     <p class="card-text">${car.descripcion}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cantidad: ${car.cantidad}</li>    
+                    <li class="list-group-item" id="cant${car.cod}">Cantidad: ${car.cantidad}</li>    
                     <li class="list-group-item">Precio $ ${car.precio}</li>
                     <li class="list-group-item">Talle: ${car.size}</li>
                     <div class="card-body">
@@ -71,26 +74,8 @@ function showCart(car) {
 
     let btnDelete = document.getElementById(`btnDelete${car.cod}`)
 
-    btnDelete.addEventListener('click', () => {
-        console.log(car.cod);
-        console.log(cart)
-        if (car.cantidad == 1) {
-            btnDelete.parentElement.parentElement.parentElement.remove();
-            cart = cart.filter(item => item.cod !== car.cod)
-            localStorage.setItem('cart', JSON.stringify(cart))
-            totalCarrito()
-            recuperar()
-        } else {
-            car.cantidad -= 1
-            document.getElementById(`cant${car.cod}`).innerHTML = `<li class="list-group-item" id="cant${car.cod}">Cantidad: ${car.cantidad}</li>`
-            cart = cart.filter(item => item.cod !== car.cod)
-            console.log('antes push', cart)
-            cart.push(car)
-            console.log('despues push', cart)
-            localStorage.setItem('cart', JSON.stringify(cart))
-            totalCarrito()
-            recuperar()
-        }
 
-    })
+
+
+
 }
