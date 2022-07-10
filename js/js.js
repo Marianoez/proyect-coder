@@ -51,6 +51,7 @@ function showAllp(products) {
                 timer: 1500
             }) */
             addToCart(element.cod)
+
         })
 
     });
@@ -115,5 +116,6 @@ function addToCart(cod) {
         }
     }
     localStorage.setItem('cart', JSON.stringify(cart))
+    console.log(cart)
 
 }

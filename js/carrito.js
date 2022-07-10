@@ -5,6 +5,7 @@ const payBtn = document.getElementById('payBtn')
 clearBtn.addEventListener('click', () => {
     cleanCart();
 })
+
 let cart = []
 recuperar()
 
@@ -27,29 +28,33 @@ payBtn.addEventListener('click', () => {
 
 function recuperar() {
     cartHTML.innerHTML = ""
+    cart = []
     let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
     recuperarLS.forEach(element => {
         showCart(element)
         cart.push(element)
+        console.log('1', cart)
     })
-    totalCarrito()
-}
-
-function totalCarrito() {
+    console.log('2', cart)
     const totalBuy = cart.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     let p = document.getElementById('total1')
     p.innerText = `TOTAL: ${totalBuy}`
+    console.log('3', cart)
 }
+
+/* function totalCarrito() {
+    const totalBuy = cart.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
+    let p = document.getElementById('total1')
+    p.innerText = `TOTAL: ${totalBuy}`
+} */
 
 
 function cleanCart() {
     localStorage.clear()
-    totalCarrito()
     recuperar()
 }
 
 function showCart(car) {
-
     let div = document.createElement('div')
     div.className = 'product';
     div.innerHTML = `<div class="card" style="width: 18rem;">
@@ -72,24 +77,25 @@ function showCart(car) {
     let btnDelete = document.getElementById(`btnDelete${car.cod}`)
 
     btnDelete.addEventListener('click', () => {
-        console.log(car.cod);
-        console.log(cart)
+        /* console.log(car.cod);
+        console.log(cart) */
         if (car.cantidad == 1) {
             btnDelete.parentElement.parentElement.parentElement.remove();
             cart = cart.filter(item => item.cod !== car.cod)
             localStorage.setItem('cart', JSON.stringify(cart))
-            totalCarrito()
             recuperar()
+            console.log('ASI QUEDA EL CART DESPUES DEL ELSE', cart)
         } else {
             car.cantidad -= 1
-            document.getElementById(`cant${car.cod}`).innerHTML = `<li class="list-group-item" id="cant${car.cod}">Cantidad: ${car.cantidad}</li>`
-            cart = cart.filter(item => item.cod !== car.cod)
-            console.log('antes push', cart)
-            cart.push(car)
-            console.log('despues push', cart)
+                /* document.getElementById(`cant${car.cod}`).innerHTML = `<li class="list-group-item" id="cant${car.cod}">Cantidad: ${car.cantidad}</li>` */
+            console.log('CART ANTES DEL FILTRO', cart)
+            const newCart = cart.findIndex(item => item.cod == car.cod)
+            cart[newCart].cantidad = car.cantidad
+            console.log('CART DESPUES DEL FIND', cart)
+
             localStorage.setItem('cart', JSON.stringify(cart))
-            totalCarrito()
             recuperar()
+            console.log('ASI QUEDA EL CART DESPUES DEL ELSE', cart)
         }
 
     })
